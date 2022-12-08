@@ -1,0 +1,178 @@
+@import url(./card.css);
+@font-face {
+    font-family: ProductSansRegular;
+    src: url(../fonts/Product\ Sans\ Regular.ttf);
+}
+@font-face {
+    font-family: ProductSansBold;
+    src: url(../fonts/Product\ Sans\ Bold.ttf);
+}
+:root {
+    --darkBlue: #17181f;
+    --blue: #6c72cb;
+    --purple: #cb69c1;
+    --white: #eeedf0;
+}
+html {
+    scroll-behavior: smooth;
+    /* scroll-snap-type: mandatory; */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ProductSansRegular;
+    color: var(--darkBlue);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    padding-inline: 3em;
+    background: var(--blue);
+    position: relative;
+}
+section:nth-child(odd){
+    background: var(--purple);
+}
+section h2 {
+    margin-bottom: .5em;
+}
+.container {
+    opacity: 0;
+    transition: all 1s;
+}
+.show {
+    opacity: 1;
+}
+section .container h2 {
+    position: relative;
+    top: 1.5em;
+    opacity: 0;
+    transition: 1s;
+}
+section .container.show h2 {
+    top: 0;
+    opacity: 1;
+}
+section:nth-child(1) .container p,
+section:nth-child(2) .container p,
+section:nth-child(5) .container p{
+    opacity: 0;
+    transition: 1s;
+    transition-delay: .5s;
+}
+section:nth-child(1) .container.show p,
+section:nth-child(2) .container.show p,
+section:nth-child(5) .container.show p{
+    opacity: 1;
+}
+section:nth-child(3) .container .paraContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 2em;
+}
+section:nth-child(3) .container .paraContainer p{
+    padding: 3em 2em;
+    width: 20em;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, .04);
+    border-radius: .5em;
+    cursor: pointer;
+    position: relative;
+    left: -100%;
+    opacity: 0;
+    transition: .5s;
+    transition-delay: .5s;
+}
+section:nth-child(3) .container .paraContainer p:nth-child(2){
+    transition-delay: 1s;
+}
+section:nth-child(3) .container .paraContainer p:nth-child(3){
+    transition-delay: 1.5s;
+}
+section:nth-child(3) .container.show .paraContainer p{
+    left: 0;
+    opacity: 1;
+}
+section:nth-child(4) {
+    background-image: linear-gradient(45deg, #1a1a24, #1e1c32);
+}
+section:nth-child(4) .container h2 {
+    color: var(--white);
+}
+section:nth-child(4) .container .boxContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 2em;
+}
+section:nth-child(4) .container .boxContainer .box {
+    /* border: 1px solid var(--white); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+    font-family: ProductSansBold;
+    font-size: 1.5em;
+    color: var(--darkBlue);
+    position: relative;
+    left: -100%;
+    filter: blur(5px);
+    opacity: 0;
+    transition: 1s;
+}
+section:nth-child(4) .container .boxContainer .box:nth-child(1) {
+    background: var(--darkBlue);
+    color: var(--white);
+    transition-delay: .5s;
+}
+section:nth-child(4) .container .boxContainer .box:nth-child(2) {
+    background: var(--blue);
+    transition-delay: .9s;
+}
+section:nth-child(4) .container .boxContainer .box:nth-child(3) {
+    background: var(--purple);
+    transition-delay: 1.3s;
+}
+section:nth-child(4) .container .boxContainer .box:nth-child(4) {
+    background: var(--white);
+    transition-delay: 1.7s;
+}
+section:nth-child(4) .container.show .boxContainer .box {
+    opacity: 1;
+    left: 0;
+    filter: blur(0);
+}
+section:nth-child(4) .buttons a {
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+.buttons {
+    position: absolute;
+    bottom: 0;
+    margin-block-end: 1em;
+    display: flex;
+    gap: 1em;
+    z-index: 50;
+}
+.buttons a {
+    border: 1px solid var(--darkBlue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.8em;
+    height: 2.8em;
+    /* padding: .5em; */
+    border-radius: 50%;
+}
