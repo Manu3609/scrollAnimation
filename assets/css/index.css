@@ -37,6 +37,7 @@ section {
     padding-inline: 3em;
     background: var(--blue);
     position: relative;
+    overflow: hidden ;
 }
 section:nth-child(odd){
     background: var(--purple);
@@ -175,4 +176,13 @@ section:nth-child(4) .buttons a {
     height: 2.8em;
     /* padding: .5em; */
     border-radius: 50%;
+}
+section .wave{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    bottom: -5.5rem;
+    left: 10%;
+}
+section .wave path {
+    fill: var(--blue);
 }
