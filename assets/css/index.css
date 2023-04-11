@@ -44,10 +44,31 @@ section:nth-child(odd){
 }
 section h2 {
     margin-bottom: .5em;
+    font-size: 7vw;
+}
+section .container p {
+    font-size: 2vw;
+}
+.cta {
+    font-size: 2vw;
+    padding: .5em 2em;
+    margin-top: 2em;
+    border: .18vw solid var(--darkBlue);
+    background: var(--darkBlue);
+    color: var(--white);
+    border-radius: 10em;
+    float: right;
+    transition: .5s ease;
+}
+.cta:hover {
+    box-shadow: 0 0 20px 20px #00000010;
+    letter-spacing: .15vw;
 }
 .container {
+    margin-block: 10vw;
     opacity: 0;
     transition: all 1s;
+    width: 80%;
 }
 .show {
     opacity: 1;
@@ -77,13 +98,15 @@ section:nth-child(5) .container.show p{
 section:nth-child(3) .container .paraContainer{
     display: flex;
     flex-wrap: wrap;
-    gap: 1em;
+    gap: 4em;
     margin-top: 2em;
 }
 section:nth-child(3) .container .paraContainer p{
     padding: 3em 2em;
     width: 20em;
-    box-shadow: 0 0 10px 10px rgba(0, 0, 0, .04);
+    font-size: 1.5vw;
+    box-shadow: 0 0 10px 20px #00000005;
+    background: #ffffff05;
     border-radius: .5em;
     cursor: pointer;
     position: relative;
