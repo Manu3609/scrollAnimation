@@ -15,7 +15,7 @@
 }
 html {
     scroll-behavior: smooth;
-    /* scroll-snap-type: mandatory; */
+    scroll-snap-type: mandatory;
 }
 * {
     margin: 0;
@@ -28,7 +28,11 @@ a {
     text-decoration: none;
     color: inherit;
 }
+.bigContainer {
+    scroll-snap-type: y mandatory;
+}
 section {
+    scroll-snap-align: start;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,6 +42,7 @@ section {
     background: var(--blue);
     position: relative;
     overflow: hidden ;
+    flex: none;
 }
 section:nth-child(odd){
     background: var(--purple);
@@ -98,7 +103,7 @@ section:nth-child(5) .container.show p{
 section:nth-child(3) .container .paraContainer{
     display: flex;
     flex-wrap: wrap;
-    gap: 4em;
+    gap: 3vw;
     margin-top: 2em;
 }
 section:nth-child(3) .container .paraContainer p{
