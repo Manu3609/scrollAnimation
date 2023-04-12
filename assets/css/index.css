@@ -137,48 +137,53 @@ section:nth-child(4) {
 }
 section:nth-child(4) .container h2 {
     color: var(--white);
+    text-align: center;
 }
 section:nth-child(4) .container .boxContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1em;
-    margin-top: 2em;
+    gap: 2em;
+    margin-top: 5vw;
 }
 section:nth-child(4) .container .boxContainer .box {
-    /* border: 1px solid var(--white); */
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 5rem;
-    height: 5rem;
+    width: 20vw;
+    height: 20vw;
+    max-width: 10rem;
+    max-height: 10rem;
     border-radius: 1rem;
     font-family: ProductSansBold;
     font-size: 1.5em;
     color: var(--darkBlue);
     position: relative;
     left: -100%;
-    filter: blur(5px);
     opacity: 0;
-    transition: 1s;
+    transition: left 1s, opacity 1s, scale .5s;
+}
+section:nth-child(4) .container .boxContainer .box:hover {
+    cursor: pointer;
+    scale: 1.2;
 }
 section:nth-child(4) .container .boxContainer .box:nth-child(1) {
     background: var(--darkBlue);
     color: var(--white);
-    transition-delay: .5s;
+    transition-delay: scale 0s, opacity .5s, left .5s;
 }
 section:nth-child(4) .container .boxContainer .box:nth-child(2) {
     background: var(--blue);
-    transition-delay: .9s;
+    transition-delay: scale 0s, opacity .9s, left .9s;
 }
 section:nth-child(4) .container .boxContainer .box:nth-child(3) {
     background: var(--purple);
-    transition-delay: 1.3s;
+    transition-delay: scale 0s, opacity 1.3s, left 1.3s;
 }
 section:nth-child(4) .container .boxContainer .box:nth-child(4) {
     background: var(--white);
-    transition-delay: 1.7s;
+    transition-delay: scale 0s, opacity 1.7s;
 }
 section:nth-child(4) .container.show .boxContainer .box {
     opacity: 1;
@@ -204,15 +209,5 @@ section:nth-child(4) .buttons a {
     justify-content: center;
     width: 2.8em;
     height: 2.8em;
-    /* padding: .5em; */
     border-radius: 50%;
-}
-section .wave{
-    position: absolute;
-    transform: translate(-50%, -50%);
-    bottom: -5.5rem;
-    left: 10%;
-}
-section .wave path {
-    fill: var(--blue);
 }
