@@ -13,7 +13,7 @@ You can see the result by clicking [here](https://manu3609.github.io/scrollAnima
 
 To install this project, simply clone the Git repository on your local machine.
 
-`git clone https://github.com/your-username/project-name.git`
+`git clone https://github.com/Manu3609/scrollAnimation.git`
 
 
 ## Usage
